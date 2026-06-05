@@ -420,6 +420,43 @@
       text-shadow: 0 0 8px var(--yellow-glow);
     }
 
+
+    .research-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .research-item {
+      border: 1px solid var(--accent-dim);
+      background: linear-gradient(135deg, rgba(0,245,255,0.03), transparent 45%, rgba(249,255,0,0.025));
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+      box-shadow: inset 0 0 18px rgba(0, 245, 255, 0.035);
+      padding: 16px;
+    }
+
+    .research-item h3 {
+      margin: 0 0 8px;
+      color: var(--accent-3);
+      font-size: 1rem;
+      text-shadow: 0 0 8px var(--yellow-glow);
+    }
+
+    .research-item h3::before {
+      content: "PAPER:: ";
+      color: var(--accent-2);
+      text-shadow: 0 0 8px var(--pink-glow);
+    }
+
+    .research-meta {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .research-item p:last-child {
+      margin-bottom: 0;
+    }
+
     .contact-line {
       display: flex;
       flex-wrap: wrap;
@@ -487,6 +524,7 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">about.txt</a>
         <a href="#work">work/</a>
+        <a href="#research">research/</a>
         <a href="#writing">writing.md</a>
         <a href="#contact">contact.sh</a>
       </nav>
@@ -494,8 +532,33 @@
       <section id="about">
         <h2>about.txt</h2>
         <p class="output">
-          Master's student at NYU Courant studying Mathematics and Computer Science. My research interests range from Pure/Applied Mathematics to Theoretical Computer Science. In particular I am interested in, Complexity Theory, Probabilistic Phenomenona, and Mathematical Statistics.
+          Master's student at NYU Courant studying Mathematics and Computer Science. My research interests range from Pure/Applied Mathematics to Theoretical Computer Science. In particular, I am interested in Complexity Theory, Probabilistic Phenomenona, and Mathematical Statistics.
         </p>
+      </section>
+
+
+      <section id="research">
+        <h2>research</h2>
+        <div class="research-list">
+          <article class="research-item">
+            <h3>Research Project or Publication Title</h3>
+            <p class="research-meta">Author(s) · Venue / Journal / Preprint · Year</p>
+            <p class="output">
+              Add a short description of the paper or research project here. You can include the main question, methods, and result in one or two sentences.
+            </p>
+            <p class="research-meta">
+              <a href="#">pdf</a> · <a href="#">code</a> · <a href="#">slides</a>
+            </p>
+          </article>
+
+          <article class="research-item">
+            <h3>Another Research Direction</h3>
+            <p class="research-meta">Work in progress · Mathematics / Theoretical CS</p>
+            <p class="output">
+              Use this space for current research interests, unpublished notes, or active projects.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="work">
